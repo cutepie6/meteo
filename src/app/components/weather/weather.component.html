@@ -1,0 +1,23 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4 text-center" style="max-width: 400px; width: 100%;">
+      <h2 class="mb-3 text-primary">🌤 Live Weather</h2>
+      
+      <!-- City Name -->
+      <h3 class="text-uppercase fw-bold">{{ city }}</h3>
+  
+      <!-- Weather Icon & Condition -->
+      <div class="d-flex align-items-center justify-content-center my-3">
+        <img *ngIf="conditionIcon" [src]="conditionIcon" alt="Weather Icon" class="weather-icon me-2">
+        <span class="fs-5 fw-semibold">{{ condition }}</span>
+      </div>
+  
+      <!-- Temperature Display -->
+      <h4 class="display-4 fw-bold text-info">{{ temperature }}°C</h4>
+  
+      <!-- Refresh Button -->
+      <button class="btn btn-outline-primary mt-3 w-100" (click)="refreshWeather()">
+        🔄 Rafraîchir
+      </button>
+    </div>
+  </div>
+  
